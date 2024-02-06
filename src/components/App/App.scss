@@ -1,4 +1,5 @@
-@import "~normalize.css";
+@import 'normalize.css';
+@import '../../ui-kit/styles';
 
 html {
   box-sizing: border-box;
@@ -8,7 +9,7 @@ html {
 }
 
 *,
-&::before,
+*::before,
 *::after {
   box-sizing: inherit;
 }
@@ -24,7 +25,8 @@ body {
   padding: 0;
   min-width: 320px;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  color: $color-text;
 }
 
 ul,
@@ -46,10 +48,4 @@ h5,
 h6,
 p {
   margin: 0;
-}
-
-.App {
-  h2 {
-    margin: 12px 0;
-  }
 }

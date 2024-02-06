@@ -1,4 +1,6 @@
 import React, { ReactNode } from "react";
+import "./Layout.scss";
+import { Header, MenuPanel } from "..";
 
 interface ILayoutProps {
   children?: ReactNode;
@@ -6,8 +8,12 @@ interface ILayoutProps {
 
 export const Layout: React.FC<ILayoutProps> = ({ children }) => {
   return (
-    <div className="layout">
-      <div className="layout-container">{children}</div>
+    <div className="Layout">
+      <MenuPanel />
+      <Header />
+      <div className="Layout-Container">
+        {children}
+      </div>
     </div>
   );
 };

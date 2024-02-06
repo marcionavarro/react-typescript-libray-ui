@@ -1,26 +1,24 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "noImplicitAny": false,
     "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "jsx": "react-jsx",
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "baseUrl": "src",
+    "allowSyntheticDefaultImports": true,
     "noFallthroughCasesInSwitch": true,
+    "types": ["vite-plugin-svgr/client"]
   },
   "include": ["src", "**/*.ts", "**/*.tsx"],
-  "exlude": ["node_modules"],
-  "references": [{ "path": "./tsconfig.node.json" }],
+  "exclude": ["node_modules"]
 }

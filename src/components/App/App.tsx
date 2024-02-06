@@ -1,20 +1,21 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+import { ROUTES } from "../../routes";
 import { Layout } from "..";
-import { Button } from "../../ui-kit";
+import "./App.scss";
+import { ButtonPage, HomePage, IconPage } from "../../pages";
 
 
 export const App: React.FC = () => {
-  const handleButtonClick = (event: React.MouseEvent) => {
-    console.log("[button click event]", event);
-  }
-
   return (
-    <Layout>
-      <h1>React Typescript Ui Library</h1>
-      <hr />
-      <h2>Button</h2>
-      <Button onClick={handleButtonClick}>Send</Button>
-      <Button isDisabled={true} onClick={handleButtonClick}>Send</Button>
-    </Layout>
+    <div className="App">
+      <Layout>
+        <Routes>
+          <Route path={ROUTES.BUTTON} element={<ButtonPage />} />
+          <Route path={ROUTES.HOME} element={<HomePage />} />
+          <Route path={ROUTES.ICON} element={<IconPage />} />
+        </Routes>
+      </Layout>
+    </div>
   );
 };
